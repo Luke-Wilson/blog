@@ -1,7 +1,10 @@
 ---
 title: Let's do this!
 date: 2016-09-09 16:36:46
-tags: hack-reactor
+tags:
+- hack-reactor
+- javascript
+- career
 ---
 ![This is the caption](/images/journey_start.jpg)
 
@@ -13,12 +16,12 @@ So, I started trying to learn code. I had a Raspberry Pi, so Python seemed like 
 
 But I was craving something more. Something with structure, with goals. Something in a collaborative environment, with other people who had a similar outlook.
 
-Enter Hack Reactor. I knew a tiny bit of Javascript and managed to get by the little coding test you need to get past the first stage. Easy peasy!
+Enter Hack Reactor. I knew a tiny bit of JavaScript and managed to get by the little coding test you need to get past the first stage. Easy peasy!
 
 Then the technical interview rolled around. I didn't actually know that It would be a technical interview. Naively I just thought it would be a meet and greet. It wasn't. I failed the interview miserably. But my interviewer was really nice and said that I just needed a bit more work.
 
 After some tutoring on the finer (but still basic) points on JavaScript, I retook the interview and passed. Phew!
 
-From there, it's just been a blur, trying to get all the precourse work done, while also trying to identify and really grasp key JS concepts. I'm definitely not there yet, but I think that will be kind of how it will be for the next 3 months: study, get confused, ask questions, make mistakes. Hopefully, there will be the occasional epiphany. :)
+From there, it's just been a blur, trying to get all the precourse work done, while also trying to identify and really grasp key JavaScript concepts. I'm definitely not there yet, but I think that will be kind of how it will be for the next 3 months: study, get confused, ask questions, make mistakes. Hopefully, there will be the occasional epiphany. :)
 
 For now, Luke out. We'll see what Monday brings... I'm excited though!
