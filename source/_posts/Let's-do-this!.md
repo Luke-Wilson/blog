@@ -1,8 +1,10 @@
 ---
-title: A New Hope...
+title: Let's do this!
 date: 2016-09-09 16:36:46
 tags: hack-reactor
 ---
+![This is the caption](/images/journey_start.jpg)
+
 On Monday, I will be jumping head first into Hack Reactor, an intensive coding bootcamp.
 
 I made this decision after feeling that my career had reached a bit of a plateau. While I was happy handling the project management side of web development and web projects over the past few years, I always wanted to 'get my hands dirty' by doing more of the actual coding. It was frustrating having to go back to the development agency for what seemed to be minor changes, all because I was worried that I'd break something if I played around with the underlying code.
