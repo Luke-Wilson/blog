@@ -1,5 +1,5 @@
 ---
-title: Let's do this!
+title: The road ahead...
 date: 2016-09-09 16:36:46
 tags:
 - hack-reactor
@@ -18,7 +18,7 @@ But I was craving something more. Something with structure, with goals. Somethin
 
 Enter Hack Reactor. I knew a tiny bit of JavaScript and managed to get by the little coding test you need to get past the first stage. Easy peasy!
 
-Then the technical interview rolled around. I didn't actually know that It would be a technical interview. Naively I just thought it would be a meet and greet. It wasn't. I failed the interview miserably. But my interviewer was really nice and said that I just needed a bit more work.
+Then the technical interview rolled around. I didn't actually realise that it would be a technical interview. Naively, I just thought it would just be a meet and greet, a formality while taking my money. It wasn't that. At all. And I failed the interview miserably. But my interviewer was really nice and said that I just needed a bit more work.
 
 After some tutoring on the finer (but still basic) points on JavaScript, I retook the interview and passed. Phew!
 
