@@ -4,7 +4,7 @@
 
 # Site
 title: Luke's Blog
-subtitle: I'm allergic to gluten. Don't hate me.
+subtitle: That's not a knife...
 description:
 author: Luke Wilson
 language:
@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://lukewilson.net
+url: http://lukewilson.herokuapp.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
