@@ -6,10 +6,11 @@
     "version": "3.2.2"
   },
   "scripts": {
-    "deploy": "hexo generate --deploy"
+    "start": "hexo generate --deploy"
   },
   "dependencies": {
     "hexo": "^3.2.0",
+    "hexo-cli": "^1.0.2",
     "hexo-deployer-git": "^0.2.0",
     "hexo-deployer-heroku": "^0.1.1",
     "hexo-generator-archive": "^0.1.4",
