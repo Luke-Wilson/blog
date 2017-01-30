@@ -68,8 +68,10 @@ theme: meilidu
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: heroku
-  repo: https://git.heroku.com/lukewilson.git
+  type: git
+  repo: https://github.com/Luke-Wilson/blog.git
+  #type: heroku
+  #repo: https://git.heroku.com/lukewilson.git
 
 # Google Analytics
 google_analytics: UA-91171801-1
