@@ -6,7 +6,7 @@ tags:
 - javascript
 - career
 ---
-![This is the caption](/images/journey_start.jpg)
+![Dude, where's my car?](/images/journey_start.jpg)
 
 On Monday, I will be jumping head first into Hack Reactor, an intensive coding bootcamp.
 

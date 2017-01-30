@@ -70,3 +70,6 @@ theme: meilidu
 deploy:
   type: heroku
   repo: https://git.heroku.com/lukewilson.git
+
+# Google Analytics
+google_analytics: UA-91171801-1
