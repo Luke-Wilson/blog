@@ -8,7 +8,7 @@ tags:
 - terminal
 ---
 
-Have YOUUU ever wanted to know how to create your own server? I know I have! Here is a really easy way to create your own server using Node.js. Because we'll be using the http module, you'll need to have Node installed, which I did by following the advice in <a href="http://blog.npmjs.org/post/85484771375/how-to-install-npm">this post from NPM</a>.
+Have YOUUUUU ever wanted to know how to create your own server? I know I have! Here is a really easy way to create your own server using Node.js. Because we'll be using the http module, you'll need to have Node installed, which I did by following the advice in <a href="http://blog.npmjs.org/post/85484771375/how-to-install-npm">this post from NPM</a>.
 
 Here are the broad steps:
 1. Create a new javascript file and open it in your favourite text editor.
