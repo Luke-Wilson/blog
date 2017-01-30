@@ -71,6 +71,7 @@ deploy:
   type: git
   repo: https://github.com/Luke-Wilson/blog.git
   branch: master
+  message: Site updated
   #type: heroku
   #repo: https://git.heroku.com/lukewilson.git
 
