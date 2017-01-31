@@ -84,7 +84,4 @@ b) update any nodes that have been joined to data
 c) remove any nodes that no longer have a join to data.
 
 <h5>More resources:</h5>
-<ul>
-<li>Mike Bostock's <a href="https://bost.ocks.org/mike/join/">data joins</a> post</li>
-<li>Mike Bostock's <a href="https://bl.ocks.org/mbostock/3808218">general update pattern example</a></li>
-</ul>
+<ul><li>Mike Bostock's <a href="https://bost.ocks.org/mike/join/">data joins</a> post</li><li>Mike Bostock's <a href="https://bl.ocks.org/mbostock/3808218">general update pattern example</a></li></ul>

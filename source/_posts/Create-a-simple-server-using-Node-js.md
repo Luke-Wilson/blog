@@ -1,5 +1,5 @@
 ---
-title: Create a simple server using Node.js
+title: Create a simple server using Node.js (without using Express)
 date: 2016-10-04 20:49:51
 tags:
 - node-js
@@ -51,7 +51,4 @@ To test your server, just open up your browser and type localhost:3002 in the UR
 That's it! Now you can quickly and easily set up a basic server using Node.js. From there, you can continue by writing out some code to help you deal with and take action on different types of requests (e.g. GET, POST, OPTIONS, DELETE, etc.)
 
 <h5>More resources:</h5>
-<ul>
-<li><a href="https://github.com/remy/nodemon">nodemon</a></li>
-<li><a href="https://nodejs.org/api/http.html">Node.js http documentation</a></li>
-</ul>
+<ul><li><a href="https://github.com/remy/nodemon">nodemon</a></li><li><a href="https://nodejs.org/api/http.html">Node.js http documentation</a></li></ul>
