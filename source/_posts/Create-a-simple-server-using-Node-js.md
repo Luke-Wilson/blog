@@ -8,22 +8,22 @@ tags:
 - terminal
 ---
 
-Have you ever wanted to know how to create your own server? I know I have! Here is a really easy way to create your own server using Node.js. Because we'll be using the http module, you'll need to have Node installed, which I did by following the advice in <a href="http://blog.npmjs.org/post/85484771375/how-to-install-npm">this post from NPM</a>.
+Here is a really easy way to create your own server using Node.js. Usually, you would use Express with Node to build a server, but sometimes its instructive to make life a little harder.
 
-Here are the broad steps:
+Before we go any further, make sure you have Node installed. There are some good instructions in <a href="http://blog.npmjs.org/post/85484771375/how-to-install-npm">this post from NPM</a>.
+
+So, here are the broad steps:
 1. Create a new javascript file and open it in your favourite text editor.
 2. Write some code and create your server.
 3. Start your server using <a href="https://github.com/remy/nodemon">nodemon</a> (Node monitor).
 4. Test your server.
 
-<h4>Step 1: Create a file called myServer.js using the terminal</h4>
-This bit is easy, but for those of you not yet familiar with working in the terminal, you can use <code>mkdir</code> to make a directory, <code>cd</code> to change directories, and <code>touch</code> to create a file.
+<h4>Step 1: Create a file called myServer.js using the terminal</h4>This bit is easy, but for those of you not yet familiar with working in the terminal, you can use <code>mkdir</code> to make a directory, <code>cd</code> to change directories, and <code>touch</code> to create a file.
 
 ![Green on black... sooo Matrix](/images/ns1.png)
 
 
-<h4>Step 2: Create your server</h4>
-This bit is also easy, but a little bit more nuanced than step 1. First we need to make Node's http module available for use. We do this by using <code>require</code>. We also can start sketching out the rest of the major parts of code i.e. creating the server, and making it listen.
+<h4>Step 2: Create your server</h4>This bit is also easy, but a little bit more nuanced than step 1. First we need to make Node's http module available for use. We do this by using <code>require</code>. We also can start sketching out the rest of the major parts of code i.e. creating the server, and making it listen.
 ![The barebones of our server code](/images/ns3.png)
 
 We'll store our server object in a variable, aptly named 'server'. http's <code>createServer</code> method takes a callback function, which takes a request argument and a response argument. The request argument is what the server receives from the client when it makes a server request. The response is what you need to build and then send back to the client using <code>response.end()</code>. (If you don't have a call to <code>response.end()</code> the request will timeout for the client.)
@@ -37,14 +37,12 @@ Now, the last bit of our code will be to tell the server to listen to a given po
 ![Our finished code!](/images/ns6.png)
 
 
-<h4>Step 3: Start your server</h4>
-Now that our server code is finished, we can start our server using the terminal. <a href="https://github.com/remy/nodemon">Nodemon</a> is great for this because it monitors for changes to your server file, however you can also just start your server using <code> node myServer.js</code>. (Make sure you run this command from within the same directory as your server file.)
+<h4>Step 3: Start your server</h4>Now that our server code is finished, we can start our server using the terminal. <a href="https://github.com/remy/nodemon">Nodemon</a> is great for this because it monitors for changes to your server file, however you can also just start your server using <code> node myServer.js</code>. (Make sure you run this command from within the same directory as your server file.)
 
 ![Start your server](/images/ns9.png)
 
 
-<h4>Step 4: Test your server</h4>
-To test your server, just open up your browser and type localhost:3002 in the URL bar. You should see the response message in the browser window, and you should also see that you've received a request by checking the server log (in the terminal).
+<h4>Step 4: Test your server</h4>To test your server, just open up your browser and type localhost:3002 in the URL bar. You should see the response message in the browser window, and you should also see that you've received a request by checking the server log (in the terminal).
 
 ![Start your server](/images/ns12.png)
 
