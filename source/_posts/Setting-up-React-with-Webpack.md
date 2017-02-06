@@ -7,12 +7,13 @@ tags:
 - Babel
 - Express
 ---
-![Look how happy he is to have gotten Webpack up and running so easily!](/images/coffee.jpg)
+
+![Look how happy he is to have gotten Webpack up and running so easily!](/images/2017/02/coffee.jpg)
 
 One of my amazing colleagues, Ivey Topaz, wrote a very helpful blog on <a href="http://iveytopaz.com/2016/10/25/starting_react_from_scratch/">setting up React from scratch using Grunt</a>.
 
-And since I haven't had the chance yet to play around with Webpack, I thought it would be useful to figure out for myself how to build a React project from scratch using Webpack. So... here we go!
-
+And since I haven't had the chance yet to play around with Webpack, I thought it would be useful to figure out for myself how to build a React project from scratch using Webpack. Come along for the ride and make your very own barebones React + Webpack + Babel repo!
+<!-- more -->
 <h3>Before we start:</h3>
 
 If you haven't got Webpack installed globally, do it meow by entering <code>npm install -g webpack</code> in your terminal.

@@ -7,11 +7,11 @@ tags:
 - data
 ---
 
-A few days ago I needed to create some d3 circle nodes (each joined to a datum in a data set) using D3, and then move those nodes every second to a new, random position. While this might not be the most common use of D3, the stuff I learned about data joins and D3's 'general update pattern' should serve me well the next time I get to use D3.
-
-So... the task at hand:
-
 ![Man, these ants are getting fat...](/images/d3_gup.gif)
+
+A few days ago I needed to create some d3 circle nodes (each joined to a datum in a data set) using D3, and then move those nodes every second to a new, random position. While this might not be the most common use of D3, the stuff I learned about data joins and D3's 'general update pattern' should serve me well the next time I get to use D3.
+<!-- more -->
+So... the task at hand:
 
 We want to create a circle for each datum in our data set. We'll do this by creating a data join (see Mike Bostock's <a href="https://bost.ocks.org/mike/join/">excellent blog post</a> that goes into more detail about data joins). Essentially, we want to join one node to one datum.
 
@@ -24,7 +24,7 @@ c) which nodes are no longer joined to data points -- .exit()
 
 Note: You'll need an SVG element for the below code, since that's what the base selection is looking for.
 
-<h4>Getting your data points into your DOM using .enter()</h4>
+<h3>Getting your data points into your DOM using .enter()</h3>
 
 You will start without any nodes joined to your data. How do you create a circle for each datum? Using <code>.enter()</code>.
 
@@ -51,7 +51,7 @@ d3.select('svg').selectAll('circle')   // ---> Don't worry that there are no cir
 
 The above code selects the SVG, looks for any circles to update (there are none), then when it sees <code>.enter()</code>, it says, "Oh, OK. I need to append a circle to SVG for every data point that doesn't yet have a DOM node attached to it."
 
-<h4>Updating your data-joined DOM nodes using .update()</h4>
+<h3>Updating your data-joined DOM nodes using .update()</h3>
 Now that we have some nodes in the DOM that are joined to data, we need to select them so that we can update their X and Y coordinates. We do this using .update(). Actually... we don't even need to write <code>.update()</code>, because <code>.update()</code> is returned by the <code><i>selection</i>.data()</code>.
 
 So, here's how we select existing data-joined nodes and update them:
@@ -66,7 +66,7 @@ d3.select('svg').selectAll('circle')
 
 Easy, right?
 
-<h4>Removing DOM nodes using .exit()</h4>
+<h3>Removing DOM nodes using .exit()</h3>
 Ok, so now we know <code>.update()</code> creates a sub-selection of nodes that ARE joined to data, and <code>.enter()</code> creates a sub-selection of datum that AREN'T joined to nodes. Let's look at <code>.exit()</code>
 
 <code>.exit()</code> creates a sub-selection of remaining nodes that are no longer bound to data. This might happen if you were dynamically updating the data set (maybe if the user was filtering data?) Usually, we don't want any loose nodes just floating around, so we'll probably want to remove them from our graph. So...

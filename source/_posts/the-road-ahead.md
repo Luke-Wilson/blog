@@ -11,7 +11,7 @@ tags:
 On Monday, I will be jumping head first into Hack Reactor, an intensive coding bootcamp.
 
 I made this decision after feeling that my career had reached a bit of a plateau. While I was happy handling the project management side of web development and web projects over the past few years, I always wanted to 'get my hands dirty' by doing more of the actual coding. It was frustrating having to go back to the development agency for what seemed to be minor changes, all because I was worried that I'd break something if I played around with the underlying code.
-
+<!-- more -->
 So, I started trying to learn code. I had a Raspberry Pi, so Python seemed like a good start. I took whatever tutorials and mini-courses I could find: Codecademy, Coursera, Udemy, Code Wars etc. There are so many good (and free) resources around the internet that will get the ball rolling.
 
 But I was craving something more. Something with structure, with goals. Something in a collaborative environment, with other people who had a similar outlook.
