@@ -144,7 +144,7 @@ npm install --save express webpack-dev-middleware
 {% endcodeblock %}
 
 Let's just create a standard server in <code>server.js</code>. We'll add some necessary code to get Webpack running. We need to:
-1. create your <code>compiler</code> object from webpack and our config
+1. create our <code>compiler</code> object from webpack and our config
 2. use our <code>webpack-dev-middleware</code> with our compiler object and input some options
 
 
@@ -167,7 +167,7 @@ app.use(express.static(path.join(__dirname, '../www')));
 
 //use webpack middleware with our compiler object and some options
 app.use(webpackDevMiddleware(compiler, {
-  hot: true, //hot reloading?
+  hot: true,
   filename: 'bundle.js',
   publicPath: '/',
   stats: {
