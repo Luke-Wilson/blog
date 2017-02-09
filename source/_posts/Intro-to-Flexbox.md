@@ -31,7 +31,7 @@ It is also 'direction-agnostic' meaning you can flip the layout on its side, or 
 
 <h4><strong>Flex containers and flex items</strong></h4>
 
-To use Flexbox, you'll need to create a flex container. This is as adding <code>display: flex;</code> to an element's CSS.
+To get started with Flexbox, you'll need to create a flex container. This is as adding <code>display: flex;</code> to an element's CSS.
 
 {% codeblock %}
 .container {
@@ -114,5 +114,10 @@ For example, if you wanted a particular item to be the first item, you could set
 ![](/images/2017/02/dabc.png)
 
 <br /><h3>Part 2 coming soon...</h3>
-We'll look at wrapping and <code>align-content</code>, as well as <code>flex</code> (which includes <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code>). Stay tuned!
+We'll look at wrapping and <code>align-content</code>, as well as <code>flex</code> (which includes <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code>).
+
+In the meantime, here are some great resources for you to try out:
+- Wes Bos' AWESOME (and free) Flexbox course, <a href="https://flexbox.io/">What the Flexbox?</a>
+- <a href="flexboxfroggy.com">FlexboxFroggy</a>, a fun game to practice the basics of aligning and position content
+- <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a>, from css-tricks.com
 
