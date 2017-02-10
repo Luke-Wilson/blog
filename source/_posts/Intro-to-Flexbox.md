@@ -6,7 +6,7 @@ tags:
 - Flexbox
 ---
 
-![Flexbox is awesome and it might make vanilla your new favorite flavor.](/images/2017/02/ice-cream.jpg)
+![Flexbox is so awesome, it might just make vanilla your new favorite flavor.](/images/2017/02/ice-cream.jpg)
 
 For a long time, I hated vanilla CSS. I just didn't get it. Why won't my div, image, input field, or whatever go where I want it to go?! How do I center that thing? NO, NOT THERE DAMMIT!
 
@@ -21,7 +21,7 @@ So without further ado, here is part 1 of my **Intro to Flexbox** series of post
 
 <br /><h3>So, what is Flexbox?</h3>
 
-Flexbox was introduced with CSS3. It gives us an easy-to-use box model for laying out user interfaces. It is great for aligning items and distributing space among those items within their parent container. It adapts well when the dimensions of items or the container change, intelligently filling the available space.
+Flexbox, short for 'flexible boxes', was introduced with CSS3. It gives us an easy-to-use box model for laying out user interfaces. It is great for aligning items and distributing space among those items within their parent container. It adapts well when the dimensions of items or the container change, intelligently filling the available space.
 
 It is also 'direction-agnostic' meaning you can flip the layout on its side, or reverse it, without changing the orientation of the content itself. Missy Elliot would be stoked.
 
@@ -45,12 +45,12 @@ All children of a flex container automatically become 'flex items', which means 
 
 Before we go any further, we should talk about axes. And not the wood-chopping variety.
 
-A flex container has a main axis and a cross axis.
+A flex container has a main axis and a cross axis. With default settings, it should look like this:
 ![Image: css-tricks.com](https://cdn.css-tricks.com/wp-content/uploads/2011/08/flexbox.png)
 
 Now, while the main axis by default goes from left to right, that may not always be the case because Flexbox is direction-agnostic.
 
-Using <code>flex-direction</code> in your flex container will change the container's orientation and thus change your axes around. For instance, <code>flex-direction: row-reverse;</code> will make your main axis go from right to left, and <code>flex-direction: column</code> will change your main axis to go from top to bottom. (The content inside your flex items won't be upside down though, just the layout's orientation.)
+Using <code>flex-direction</code> in your flex container will change the container's orientation and thus change your axes around. For instance, <code>flex-direction: row-reverse;</code> will make your main axis go from right to left, and <code>flex-direction: column</code> will change your main axis to go from top to bottom, and your cross axis would then be horizontal. (The content inside your flex items won't be on it's side though, just the orientation of the container.)
 
 {% blockquote %}
 <code>flex-direction</code> summary:
@@ -118,6 +118,6 @@ We'll look at wrapping and <code>align-content</code>, as well as <code>flex</co
 
 In the meantime, here are some great resources for you to try out:
 - Wes Bos' AWESOME (and free) Flexbox course, <a href="https://flexbox.io/">What the Flexbox?</a>
-- <a href="flexboxfroggy.com">FlexboxFroggy</a>, a fun game to practice the basics of aligning and position content
+- <a href="flexboxfroggy.com">FlexboxFroggy</a>, a fun game to practice the basics of aligning and positioning content
 - <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a>, from css-tricks.com
 
