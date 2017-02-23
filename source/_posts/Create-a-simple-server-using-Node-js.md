@@ -9,9 +9,9 @@ tags:
 ---
 ![](/images/2016/nodejs.png)
 
-Here is a really easy way to create your own server using Node.js. Usually, you would use Express with Node to build a server, but sometimes its instructive to make life a little harder.
+Creating your own server using Node.js is super easy. Usually, you would use Express with Node to build a server, but sometimes its instructive to make life a little harder.
 <!-- more -->
-Before we go any further, make sure you have Node installed. There are some good instructions in <a href="http://blog.npmjs.org/post/85484771375/how-to-install-npm">this post from NPM</a>.
+Before we go any further, make sure you have Node installed. There are some good instructions in {% link this post from NPM http://blog.npmjs.org/post/85484771375/how-to-install-npm %}.
 
 So, here are the broad steps:
 1. Create a new javascript file and open it in your favourite text editor.

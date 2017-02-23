@@ -14,7 +14,7 @@ In this post, we'll play around with resizing flex items based on available spac
 
 <!-- more -->
 {% blockquote %}
-Here is a <a href="https://jsfiddle.net/lukewilson/qhshu9hn/7/">JSFiddle that I prepared earlier</a> for you to play with as you read this post.
+Here is a <a href="https://jsfiddle.net/lukewilson/qhshu9hn/10/">JSFiddle that I prepared earlier</a> for you to play with as you read this post.
 {% endblockquote %}
 
 <h3>flex... or flex-grow, flex-shrink, and flex-basis</h3>
@@ -109,6 +109,10 @@ So in the above example, there is some white space between the first row (with t
 This is handled by <code>align-content</code>, which has a default value of <code>stretch</code>, meaning that the wrapped lines will stretch to fit the height of the container. Let's get rid of the space between the rows by adding <code>align-content: flex-start;</code> to our container's CSS:
 
 ![](/images/2017/02/ac4.png)
+
+Now our rows are all bunched up at the top of the container, instead of being spread out vertically. If we changed it to <code>align-content: flex-end</code>, the rows would be bunched up at the bottom of the container.
+
+<code>align-content</code> is just like <code>justify-content</code>, except that the latter handles spacing along the main axis, whereas <code>align-content</code> handles spacing along the cross axis.
 
 {% blockquote %}
 <code>align-content</code> summary:
