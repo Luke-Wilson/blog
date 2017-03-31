@@ -128,7 +128,7 @@ Following <a href="https://github.com/johnpapa/angular-styleguide/blob/master/a1
 
 {% codeblock client/index.html %}
 ...
-<div ng-controller="messagesController as messages">
+<div ng-controller="messageController as messages">
   {% raw %}{{messages.test}}{% endraw %}
 </div>
 ...
