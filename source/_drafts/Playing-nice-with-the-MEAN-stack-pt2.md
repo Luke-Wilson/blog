@@ -8,7 +8,7 @@ So in our last post...
 
 
 
-Essentially we will be replacing the 'database' variable, which is just an object literal, with an actual MongoDB database.
+Essentially we will be replacing the <code>mockDatabase</code> array with an actual MongoDB database.
 
 Broad steps:
 - Run mongod, since we're going to be creating and accessing a database on our local machine. If you were hosting your database somewhere, you could skip this step.
@@ -21,8 +21,7 @@ Before we get too far ahead of ourselves, let's go over some Mongoose/MongoDB te
 
 <h4>Schema</h4>
 
-The blueprint: Schemas are essentially a definition of how you want your documents to look. For example, if you want to have a document that describes a user, and you want to record specific information about each user, namely: username, first name, last name, and DoB. The schema is where you tell Mongoose the name and type (e.g. String, Boolean etc.) of information you want to store for any of your document types.
-Also, if your document will need any built-in methods, you can add them to the schema definition.
+The blueprint: Schemas are essentially a definition of your documents and what info and methods they should contain. For example, if you want to have a document that describes a user, and you want to record specific information about each user, namely: username, first name, last name, and DoB. The schema is where you tell Mongoose the name and type (e.g. String, Boolean etc.) of information you want to store for any of your document types. Also, if your document will need any built-in methods, you can add them to the schema definition.
 Each schema automatically maps to a MongoDB collection.
 {% codeblock %}
 var userSchema = mongoose.schema({
@@ -30,7 +29,7 @@ var userSchema = mongoose.schema({
   firstName: String,
   lastName: String,
   dob: Date,
-})
+});
 {% endcodeblock %}
 
 
@@ -50,12 +49,10 @@ The actual info: A document is an instance of a model. Documents can be created 
 
 MongoDB documents are grouped into collections. They are kind of like tables in MySQL, but they do not enforce a schema, and thus all documents within a collection don't need to have the same fields. This is what makes NoSQL database systems like MongoDB so flexible.
 
+<h3>Let's do this!</h3>
 
-Let's do this!
 Step 1. Connect to the database:
-In our <code>server.js</code> file, we're going to replace the mockDatabase with a real MongoDB database.
-- require mongoose.
-Let's require mongoose, set the address of the database and open a pending connection. I just called my database 'messages', and because I'm running it on my own machine, the address is <code>mongodb://localhost/messages</code>
+In our <code>server.js</code> file, we're going to replace the <code>mockDatabase</code> with a real MongoDB database. Let's require mongoose, set the address of the database and open a pending connection. I just called my database 'messages', and because I'm running it on my own machine, the address is <code>mongodb://localhost/messages</code>
 
 {% codeblock %}
 var express = require('express');
@@ -92,19 +89,45 @@ Note that some resources leave out the <code>new</code> keyword when calling mon
 
 Step 3. Compile our schema into a model
 
+{% codeblock %}
+var Message = mongoose.model('Message', messageSchema);
+{% endcodeblock %}
+
+Step 4. Update our request handlers
+All we have left is to update our old request handlers (which were set up to work with the <code>mockDatabase</code> array). The GET request is super easy. We use Mongoose's <code>model.find</code> method, which takes a condition as its first argument. We'll just pass an empty object as the condition, which will give us back all messages in the collection. <code>find</code> is one of Mongoose queries, which aren't exactly promises, but you can still follow it with a .then() block. (Note: if you need a fully fledged option, you can add use <code>exec</code> see: http://mongoosejs.com/docs/promises.html)
+
+{% codeblock %}
+// OLD GET REQUEST HANDLER
+// app.get('/api/messages', (req, res) => {
+//   res.send(mockDatabase);
+// });
+
+// UPDATED GET REQUEST HANDLER
+app.get('/api/messages', (req, res) => {
+  Messages.find({})
+  .then(messages => {
+    res.send(messages);
+  })
+});
+{% endcodeblock %}
+
+For our POST request, we create a new instance of a message object using our <code>Message</code> model. We save it, and then send the response back to the client confirming the text that we saved.
+
+{% codeblock %}
+// OLD POST REQUEST HANDLER
+// app.post('/api/messages', (req, res) => {
+//   mockDatabase.push({text: req.body.text});
+//   res.send(`successfully posted: ${req.body.text}`);
+// });
+
+// UPDATED POST REQUEST HANDLER
+app.post('/api/messages', (req, res) => {
+  var newMessage = new Message({text: req.body.text})
+  newMessage.save()
+  .then(_ => {
+    res.send(`message received and saved:  ${req.body.text}`);
+  });
+});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{% endcodeblock %}
