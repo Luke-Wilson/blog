@@ -2,19 +2,20 @@
 title: Playing nice with the MEAN stack - part 1
 tags:
   - Express
-  - Angular
+  - AngularJS
+  - Node
 date: 2017-03-21 22:04:56
 ---
 
 ![MEAN - preferred by cats everywhere](/images/2017/03/cat-pushes-cat-into-pool.gif)
 
-Whether you're new to Angular, or it's been a while since you last worked in the MEAN stack, this post should give you a clear idea of how to get the basics of an Angular app up and running.
+Whether you're new to AngularJS, or it's been a while since you last worked in the MEAN stack, this post should give you a clear idea of how to get the basics of an AngularJS app up and running.
 <!-- more -->
-Angular is a great MVW (MV-Whatever) framework that has very useful two-way data binding between the view and the model. It also has easy dependency injection, allowing for highly modularized code without a lot of hassle. You can get an Angular app up and running really quickly, which makes it great for quickly building prototypes.
+AngularJS is a great MVW (MV-Whatever) framework that has very useful two-way data binding between the view and the model. It also has easy dependency injection, allowing for highly modularized code without a lot of hassle. You can get an AngularJS app up and running really quickly, which makes it great for quickly building prototypes.
 
 To demo some of this, we'll run through how to build a simple message board app using the MEAN stack.  In this post, we'll:
 - create a basic server with a mock database (we'll add MongoDB in pt 2)
-- create a front end using Angular
+- create a front end using AngularJS
 - hook up some comms between the front end and the back end
 
 Our initial file structure will look like this:
@@ -59,12 +60,12 @@ app.listen(port, _ => {
 });
 {% endcodeblock %}
 
-<h3>Setting up Angular</h3>
+<h3>Setting up AngularJS</h3>
 
-In our <code>index.html</code>, we'll just add some static content, load the angular CDN in the HEAD section, and just before the closing body tag, we'll load our index.js file.
+In our <code>index.html</code>, we'll just add some static content, load the AngularJS CDN in the HEAD section, and just before the closing body tag, we'll load our index.js file.
 
-In our <code>index.js</code> file, we can set up a super basic Angular app using <code>angular.module</code>, and one controller constructor:
-{% codeblock SUPER basic Angular hookup. It works, but... %}
+In our <code>index.js</code> file, we can set up a super basic AngularJS app using <code>angular.module</code>, and one controller constructor:
+{% codeblock SUPER basic AngularJS hookup. It works, but... %}
 var myApp = angular.module('messageBoard', [])
 myApp.controller('messageController', function($scope) {
   $scope.test = 'OMG Angular is working';
@@ -91,7 +92,7 @@ In <code>messageController.js</code>, let's create a new module called <code>mes
 {% codeblock client/messages/messageController.js%}
 angular.module('messageBoard.messageController', [])
 .controller('messageController', function ($scope) {
-  $scope.test = 'OMG Angular is working!';
+  $scope.test = 'OMG AngularJS is working!';
 });
 {% endcodeblock %}
 
@@ -174,7 +175,7 @@ angular.module('messageBoard.messageService', [])
 });
 {% endcodeblock %}
 
-getMessages uses Angular's built-in $http service to send a GET request to the server at <code>/api/messages</code>, and then wait and return the response. postMessage POSTs a message to the server, waits and then returns the response. All the other logic will be sorted out on the server in server.js...
+getMessages uses AngularJS's built-in $http service to send a GET request to the server at <code>/api/messages</code>, and then wait and return the response. postMessage POSTs a message to the server, waits and then returns the response. All the other logic will be sorted out on the server in server.js...
 
 {% codeblock server/server.js %}
 ...
@@ -242,6 +243,4 @@ Everything should now be hooked up and working!
 
 <h3>Hold up, wait a minute...</h3>
 
-There's only one thing wrong. We don't have persistent data: whenever the server restarts, we lose all our messages. In the next post, we'll hook up a persistent data store using MongoDB and Mongoose.
-
-
+There's only one thing wrong. We don't have persistent data: whenever the server restarts, we lose all our messages. In the [next post](/2017/03/21/Playing-nice-with-the-MEAN-stack-pt1/), we'll hook up a persistent data store using MongoDB and Mongoose.
