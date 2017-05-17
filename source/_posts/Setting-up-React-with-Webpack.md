@@ -101,7 +101,6 @@ Now let's create our <code>webpack.config.js</code> file, which is where we'll k
 In the root diretory, create a file called <code>webpack.config.js</code> and drop the following code in there.
 {% codeblock webpack.config.js %}
 var path = require('path');
-
 module.exports = {
   context: path.join(__dirname, 'src'),
   entry: [
@@ -116,20 +115,20 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel'],
+        loaders: ['babel-loader'],
       },
     ],
   },
   resolveLoader: {
-    root: [
+    modules: [
       path.join(__dirname, 'node_modules'),
     ],
   },
   resolve: {
-    root: [
+    modules: [
       path.join(__dirname, 'node_modules'),
     ],
-  },
+  }
 };
 
 {% endcodeblock %}
@@ -185,14 +184,6 @@ app.listen(port, () => {
 
 
 Now that's all set up, we can test everything to make sure it's working. In your terminal, at your project's root directory, type <code>node server/server.js</code>. Webpack should tell you that it 'compiled successfully', your server should be running, and if you navigate to http://localhost:3003 in your browser, you should see the log output from <code>app.js</code> in the browser's console.
-
-{% blockquote %}
-NOTE: If, at this point, your terminal gives you an error saying "configuration.resolve has an unknown property 'root'" (or something similar), then you probably have a later version of webpack installed than my repo did. If this happens to you, uninstall Webpack by typing <code>npm uninstall webpack</code> and then typing:
-{% codeblock %}
-npm install \-\-save webpack@^1.14.0
-{% endcodeblock %}
-For reference, Webpack 2 merged resolve.root into resolve.modules. More info here: https://gist.github.com/sokra/27b24881210b56bbaff7#resolving-options.
-{% endblockquote %}
 
 
 <br /><h3>6. Add React and create a test component</h3>
