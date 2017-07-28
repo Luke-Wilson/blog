@@ -224,7 +224,7 @@ class StatefulComponent extends React.Component {
   }
 }
 
-export default React.createElement(StatefulComponent);
+export default StatefulComponent;
 {% endcodeblock %}
 
 Lastly, let's import our new component into <code>app.js</code> and render it to the DOM.
