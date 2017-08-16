@@ -132,7 +132,7 @@ That's pretty much it! Check out the differences in response times:
 
 ![](/images/2017/08/API_vs_Redis_times.png)
 
-Obviously this is just a basic example, and it's utility in the real world is a bit limited without further tweaks, but hopefully it gives you enough to go on. From here, you can do some fun extra exploration like manually deleting values, playing with expiration times, flushing the database, or storing values as sets or hashes. Have fun!
+Obviously this is just a basic example, and its utility in the real world is a bit limited without further tweaks, but hopefully it gives you enough to go on. From here, you can do some fun extra exploration like manually deleting values, playing with expiration times, flushing the database, or storing values as sets or hashes. Have fun!
 
 {% codeblock Full server code %}
 var express = require('express');
