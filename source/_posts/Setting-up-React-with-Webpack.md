@@ -98,7 +98,7 @@ Webpack is a module bundler. With the help of babel-loader, it will take our mod
 
 Now let's create our <code>webpack.config.js</code> file, which is where we'll keep all of our configuration details. Essentially this file will define the <code>context</code> (the path to your client-side JavaScript folder where your entry point will be), the <code>entry</code> point (file or files that we want to include in our build), <code>output</code> (what Webpack will name the file it builds - in our case 'bundle.js'), <code>module.loaders</code> (how modules should be handled before being added to our bundle). Lastly, <code>resolveLoader</code> and <code>resolve</code> are so Webpack knows where to find loaders (e.g. Babel) and our npm packages respectively.
 
-In the root diretory, create a file called <code>webpack.config.js</code> and drop the following code in there.
+In the root diretory, create a file called <code>webpack.config.js</code> and drop the following code in there. (Note: I've recently updated this config example to work in Webpack 4.)
 {% codeblock webpack.config.js %}
 var path = require('path');
 module.exports = {
