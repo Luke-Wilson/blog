@@ -111,11 +111,13 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader'],
+        use: {
+          loader: 'babel-loader'
+        }
       },
     ],
   },
@@ -244,9 +246,3 @@ ReactDOM.render(StatefulComponent, document.getElementById('app'));
 So, hopefully when you start up your server, Webpack should compile successfully and when you view your app in the browser, you should see the button with the very exciting functionality of adding an exclamation point each time you click it!
 
 Think of all the things you can do with this button!! Or just build something cool in React knowing that Webpack is up and running.
-
-
-
-
-
-
