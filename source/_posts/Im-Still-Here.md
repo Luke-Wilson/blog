@@ -9,7 +9,7 @@ tags:
 
 Ooof! My last blog post was almost 3 years ago. But don't fret, I'm still here, I'm still coding, and I'm still learning.
 
-With that said, I've learned A LOT over the last three years. I've built some apps that I'm really proud of at <a href="https://www.blueriver.com">Blue River</a>, where my current role is Senior Solutions Architect. Most of those projects fall under an NDA, but in future posts I'll share some lessons learned while respecting that agreement.
+With that said, I've learned A LOT over the last three years. I've built some apps that I'm really proud of at <a href="https://www.blueriver.com">Blue River</a>, where my current role is Senior Solutions Architect. In future posts I'll share some lessons learned on specific projects.
 
 The majority of those apps have been built with Vue and, as a result, Vue has overtaken React as my goto JS framework/library. Vue is super powerful and fast, and it's easy for junior devs to get their head around, which makes it easier for them to help maintain as feature requests roll in. Usually I'll integrate Vuex from the start, as I've found it's better to have it there and not need it, rather than needing it and having to interrupt your flow to set it up (although, it's really not that hard, especially when I think back at getting a Redux store setup in React). I plan on doing a quick write-up as to how I set my Vue projects up.
 
